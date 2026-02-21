@@ -1,0 +1,35 @@
+.top_image {
+    border-radius: 10px;
+    background-position: 0%;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    
+}
+.startup_image 
+{
+    width: 80%;
+    background-image: url(/assets/img/picture1ss.png);
+}
+.top_image h1 {
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+.top_image > .title {
+    padding: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.135);
+
+    right: 0;
+    text-align: center;
+}
+.right-pane 
+{
+    background-color: #ffffff;
+}
+
+.x-profile {
+    padding: 20px;
+    margin-top: 20px;
+}
