@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: titles;
+    src: url(/assets/fonts/shanty.ttf);
+}
+.right-pane 
+{
+    background-color: none;
+}
+
+.x-profile {
+    padding: 20px;
+    margin-top: 20px;
+}
+.descr 
+{
+    padding: 20px;
+    background-color: rgba(188, 188, 188, 0.846);
+}
+.card 
+{
+    padding: 10px;
+    background-image: url(/assets/img/pic.png);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+}
+ h1 {
+    color: rgba(128, 85, 235, 0.746);
+    margin-bottom: 10px;
+    font-family: titles;
+    font-size: 50px;
+
+    text-align: left;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+@media screen and (max-width: 800px) 
+{
+   h1  
+    {
+        font-size: 50px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .description > .flex 
+    {
+        flex-direction: column;
+    }
+}

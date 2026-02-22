@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="assets/styles/projects.css" />
+{% endblock %}
+
+{% block main_content %}
+<h1 class="projects-title">Projects</h1>
+<div class="projects">
+
+    <div onclick="window.location.href = `https://github.com/Eliezerdev01`;" class="project flex">
+        <div class="project-img"></div>  
+        <div class="project-title">
+            <h3>0.1 API Project</h3>
+        </div>
+        <div class="project-content">
+            <h5>An api project in github, api with python and flask_restful </h5>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block quick_index %}
+{% endblock %}

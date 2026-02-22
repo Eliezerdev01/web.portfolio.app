@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> eliezersoftdevs </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1"/>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
+    <link rel="stylesheet" href="assets/styles/drawer.css"/>
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+<nav class="nav-bar flex">
+    <div onclick="window.location.href = '/';" class="left-nav flex">
+    </div>
+    <ul class="nav-menu right-nav">
+        {% block nav %}
+        <li><button class="btn-link btn-secondary" onclick="window.location.href = '/contact';">Contact</button></li>
+        <li><button class="btn-link btn-secondary" onclick="window.location.href = '/faqs';">FAQs</button></li>
+        {% endblock %}
+    </ul>
+    <div onclick="Drawer()" class="mob-dr"></div>
+</nav>
+<div class="div-drawer hidden" id="drawer">
+            <div class="drawer-container flex">
+            <div class="drawer-action-close ">
+                <div onclick="hide_drawer();" class="close"></div>
+            </div>
+            <div class="drawer-content">
+                <ul class="not-list">
+                {% block mob_nav %}
+                <li><a href="/" class="drawer-actions visible">Homepage</a></li>
+                <li><a href="/about" class="drawer-actions visible">About me</a></li>
+                <li><a href="/qualifications" class="drawer-actions visible">Good in</a></li>
+                <li><a href="/projects" class="drawer-actions visible">Projects</a></li>
+                <!-- <li><a href="/resume" class="drawer-actions visible">Resume</a></li> -->
+                <li><a href="/contact" class="drawer-actions visible">Contact</a></li>
+                <li><a href="tel:+254740336004" class="drawer-actions visible">Call</a></li>
+                <li><a href="mailto:dev.eliezer.media@gmail.com" class="drawer-actions visible">Feedback</a></li>
+                <li><a href="/faqs" class="drawer-actions visible">FAQs</a></li>
+                {% endblock %}
+                </ul>
+            </div>            
+        </div>
+    </div>
+
+<main class="div-spacing top-main-margin">
+
+<!-- SECTION ONE  -->
+
+<!-- Only availlable in PC -->
+<div class="main-frame flex pad backed">
+    <div class="cont flex">
+        <div class="moveable flex">
+            <div class="div-spacing left-with-bg flex">
+                <p class="centered p colored">Navigation panel</p>
+                {% block nav_panel %}
+                <div class="both">
+                    <button onclick="window.location.href='/';" class="btn-spacing btn-link-gen btn-gen-primary">Homepage</button>
+                </div>
+                <div class="both">
+                    <button onclick="window.location.href='/about';" class="btn-spacing btn-link-gen btn-gen-primary">About me</button>
+                </div>
+                <div class="both">
+                    <button onclick="window.location.href='/qualifications';" class="btn-spacing btn-link-gen btn-gen-primary">Good in</button>
+                </div>
+                <div class="both">
+                    <button onclick="window.location.href='/projects';" class="btn-spacing btn-link-gen btn-gen-primary">Projects</button>
+                </div>
+                <!-- <div class="both">
+                    <button onclick="window.location.href='/resume';" class="btn-spacing btn-link-gen btn-gen-primary">Resume(CV)</button>
+                </div> -->
+                <div class="both">
+                    <button onclick="window.location.href='/contact';" class="btn-spacing btn-link-gen btn-gen-primary">Contact</button>
+                </div>
+                <div class="both">
+                    <button onclick="window.location.href='mailto:dev.eliezer.media@gmail.com';" class="btn-spacing btn-link-gen btn-gen-primary">Feedback</button>
+                </div>
+                <p class="drawer-action-footer">&copy; eliezerkenya</p>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <div class="right-pane div-spacing flex">
+        <div class="content-box flex">
+            {% block main_content %}
+            {% endblock %}
+        </div>
+    </div>
+    {% block quick_index %}
+    {% endblock %}
+</main>
+<footer class="page-footer">
+    <div class="footer-content">
+        {% block footer %}
+        <p>&copy; eliezerkenya 2026 . All rights Reserved</p>
+        {% endblock %}
+    </div>
+</footer>
+<script src="assets/scripts/index.js"></script>
+</body>
+</html>
